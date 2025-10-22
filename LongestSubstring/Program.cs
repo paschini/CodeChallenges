@@ -1,4 +1,6 @@
-﻿namespace LongestSubstring;
+﻿using System.Runtime.InteropServices;
+
+namespace LongestSubstring;
 
 class Program
 {
@@ -8,46 +10,45 @@ class Program
         Console.WriteLine($"Length of longest substring, without repeating chacters: {Solution.LengthOfLongestSubstring("bbbbb").ToString()}"); // b
         Console.WriteLine($"Length of longest substring, without repeating chacters: {Solution.LengthOfLongestSubstring("pwwkew").ToString()}"); // wke
         Console.WriteLine($"Length of longest substring, without repeating chacters: {Solution.LengthOfLongestSubstring("dvdf").ToString()}"); //vdf
+        Console.WriteLine($"Length of longest substring, without repeating chacters: {Solution.LengthOfLongestSubstring("ghifk").ToString()}"); //vdf
+        Console.WriteLine($"Length of longest substring, without repeating chacters: {Solution.LengthOfLongestSubstring("").ToString()}"); //vdf
     }
 
     public static class Solution
     {
         public static int LengthOfLongestSubstring(string s)
         {
-            string uniques = "";
-            string result = "";
+            if (s.Length == 0) return 0;
+            
+            var charset = new HashSet<char>(s);
+            string uniques =  string.Join("", charset);
             string[] found = {};
             
-            //find uniques
-            for (int i = 0; i < s.Length; i++)
+            for (int x = 0; x < s.Length; x++)
             {
-                uniques = uniques.Contains(s[i]) ? uniques : uniques + s[i];
-            }
-            
-            Console.WriteLine($"uniques: {uniques}");
-            for (int i = 0; i < s.Length; i++)
-            {
-                for (int j = uniques.Length; j > 0; j--)
+                for (int i = 0; i < s.Length - uniques.Length + 1; i++)
                 {
-                    string next = s.Substring(i, j );
-                    // Console.WriteLine(next);
-                    Console.WriteLine($"i: {i} j: {j} next: {next}");
-                    
-                    // Console.WriteLine($"found: {next}");
-                    found = found.Append(next).ToArray();
-                    result = next;
+                    for (int j = uniques.Length; j > 0 ; j -= uniques.Length)
+                    {
+                        string next = s.Substring(i, j);
+                        charset = new HashSet<char>(next);
+                        string deduped = string.Join("", charset);
+
+                        found = s.Contains(deduped) && !found.Contains(deduped) ? found.Append(deduped).ToArray() : found;
+                    }
                 }
 
-                if (s.Substring() > 0)
+                if (uniques.Length > 1)
                 {
-                    
+                    uniques = uniques.Remove(0, 1);
                 }
-                // if (s.Contains(result)) break;
+                else
+                {
+                    break;
+                }
             }
             
-            string bigger = found.MaxBy(x => x.Length);
-            Console.WriteLine($"result: {result}");
-            return bigger.Length;
+            return found.MaxBy(x => x.Length).Length;
         }
     }
 }
