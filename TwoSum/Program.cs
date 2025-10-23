@@ -1,20 +1,20 @@
-﻿using System.IO.Compression;
+﻿namespace TwoSum;
 
-namespace TwoSum;
-
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // Solution.TestWithInputAndTarget([3,3], 6);
         // Solution.TestWithInputAndTarget([3, 2, 3], 6);
-        Solution.TestWithInputAndTarget([-3,4,3,90], 0);
+        Solution.TestWithInputAndTarget([-3, 4, 3, 90], 0);
     }
-    
-    public static class Solution {
-        public static int[] TwoSum(int[] nums, int target) {
+
+    public static class Solution
+    {
+        public static int[] TwoSum(int[] nums, int target)
+        {
             // Follow up Solution
-            var seen = new Dictionary<int, int>(); // value → index
+            Dictionary<int, int> seen = new(); // value → index
 
             for (int i = 0; i < nums.Length; i++)
             {
@@ -28,7 +28,7 @@ class Program
             }
 
             return Array.Empty<int>(); // fallback, shouldn't happen per problem constraints
-            
+
             // First solution, brute force O(n^2) --- slooooow
             // int[] result = {};
             //
@@ -49,10 +49,7 @@ class Program
         public static string OutputArray(int[] arr)
         {
             string output = "";
-            foreach (int num in arr)
-            {
-                output = $"{output} {num} ";
-            }
+            foreach (int num in arr) output = $"{output} {num} ";
 
             return output;
         }
@@ -60,7 +57,7 @@ class Program
         public static void TestWithInputAndTarget(int[] input, int target)
         {
             int[] result = TwoSum(input, target);
-        
+
             Console.WriteLine($"Input: {OutputArray(input)} Target: {target}");
             Console.WriteLine($"Result: {OutputArray(result)}");
         }
