@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstring", "LongestSubstring\LongestSubstring.csproj", "{04086B5E-73B4-4419-8D42-5ABD011FB11E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveElement", "RemoveElement\RemoveElement.csproj", "{A96115D2-5E16-42FE-94D8-A7D2D474CFC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{04086B5E-73B4-4419-8D42-5ABD011FB11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04086B5E-73B4-4419-8D42-5ABD011FB11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04086B5E-73B4-4419-8D42-5ABD011FB11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A96115D2-5E16-42FE-94D8-A7D2D474CFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96115D2-5E16-42FE-94D8-A7D2D474CFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96115D2-5E16-42FE-94D8-A7D2D474CFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96115D2-5E16-42FE-94D8-A7D2D474CFC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

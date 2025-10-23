@@ -5,8 +5,9 @@ Topics
 premium lock icon
 Companies
 
->["hint]
-> Hint
+>[!hint]
+> 
+> ### Hint
 > Given a string s, find the length of the longest substring without duplicate characters.
 
 
