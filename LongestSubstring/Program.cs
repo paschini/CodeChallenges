@@ -40,10 +40,44 @@ internal class Program
             }
 
             return maxLen;
+            
+            // close but exceeding timelimit:
+            //if (s.Length == 0) return 0;
+            // 
+            // var charset = new HashSet<char>(s);
+            // string uniques =  string.Join("", charset);
+            // string[] found = {};
+            // 
+            // for (int x = 0; x < s.Length; x++)
+            // {
+            //     for (int i = 0; i < s.Length - uniques.Length + 1; i++)
+            //     {
+            //         for (int j = uniques.Length; j > 0 ; j -= uniques.Length)
+            //         {
+            //             string next = s.Substring(i, j);
+            //             charset = new HashSet<char>(next);
+            //             string deduped = string.Join("", charset);
+
+            //             found = s.Contains(deduped) ? found.Append(deduped).ToArray() : found;
+            //         }
+            //     }
+
+            //     if (uniques.Length > 1)
+            //     {
+            //         uniques = uniques.Remove(0, 1);
+            //     }
+            //     else
+            //     {
+            //         break;
+            //     }
+            // }
+            // 
+            // return found.MaxBy(x => x.Length).Length;
         }
 
         private static void ShowWindow(string s, int left, int right, int maxLength)
         {
+            // added this for fun xD
             Console.Clear();
             Console.WriteLine($"Max length: {maxLength}");
             for (int i = 0; i < s.Length; i++)
