@@ -17,6 +17,52 @@ internal class Program
     {
         public static int RemoveElement(int[] nums, int val)
         {
+            
+            // first try
+            // int k = 0;
+
+            // if (nums.Length == 0) return k;
+
+            //     for (int i = 0; i < nums.Length; i++)
+            //     {
+            //         if (nums[i] != val)
+            //         {
+            //             k++;
+            //         }
+            //     }
+
+            //     if (nums.Length > 2)
+            //     {
+            //         for (int i = 0; i < nums.Length; i++)
+            //         {
+            //             if (nums[i] == val)
+            //             {
+            //                 if (i < k)
+            //                 {
+            //                     if (k + i < nums.Length - 1)
+            //                     {
+            //                         (nums[k + i], nums[i]) = (nums[i], nums[k + i]);
+            //                     }
+            //                     else
+            //                     {
+            //                         (nums[nums.Length - i], nums[i]) = (nums[i], nums[nums.Length - i]);
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     else if (nums.Length <= 2)
+            //     {
+            //         if (nums[0] == val && nums[nums.Length - 1] != 1)
+            //         {
+            //             (nums[0], nums[1]) = (nums[1], nums[0]);
+            //         }
+            //         
+            //         k = 1;
+            //     }
+            //     return k;
+            
+            
             Console.Write("Nums original: ");
             foreach (int num in nums) Console.Write($"{num} ");
 
