@@ -49,6 +49,8 @@ with Buzz and ones divisible by both and with FizzBuzz.
 
 ```bash
     dotnet run 2 3 7
+```
+```
     
     1
     Fizz
@@ -61,7 +63,9 @@ with Buzz and ones divisible by both and with FizzBuzz.
 
 ```bash
     dotnet run 2 4 7
-    
+```
+
+```
     1
     Fizz
     3
@@ -73,7 +77,9 @@ with Buzz and ones divisible by both and with FizzBuzz.
 
 ```bash
     dotnet run 3 5 7
-    
+```
+
+```
     1
     2
     Fizz
