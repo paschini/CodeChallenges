@@ -50,3 +50,7 @@ s consists of English letters, digits, symbols and spaces.
 ```
 
 ✋🏼🤚🏼
+
+```bash
+  dotnet run 
+```

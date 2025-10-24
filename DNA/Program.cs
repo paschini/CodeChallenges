@@ -66,6 +66,66 @@ class Program
                 if (!seen.Add(hash)) // already seen → repeated
                     result.Add(s.Substring(i - 9, 10));
             }
+            
+            // close, I thought I had to care about when the letters change
+            // then I saw a test where the letter would change all the time, and confirmed I was on the wrong track here
+            // var seen = new HashSet<string>();
+            // string looking = "";
+            // int right = 0;
+            // int[] indexOfChange = [];
+            // 
+            // for (int left = 0; left < s.Length; left++)
+            // {
+            //     right = indexOfChange.Length > 0 ? indexOfChange.Min() : 0;
+            //     while (looking.Length < 10 && right < s.Length && s.Length - left >= 10)
+            //     {
+            //         looking += s[right];
+
+            //         if (looking.Length > 1 && looking[^1] != looking[^2])
+            //         {
+            //             indexOfChange = indexOfChange.Append(looking.Length - 1).ToArray();
+            //         }
+            //         right++;
+            //     }
+            //     
+            //     if (looking.Length == 10) seen.Add(looking);
+            //     looking = "";
+            // }
+
+            // return seen.ToArray();
+            
+            // close agaain, but time limit exceeded
+            // HashSet<string> result = [];
+            // IList<string> seen = [];
+            // string looking = "";
+            // int right = 0;
+
+            // for (int left = 0; left < s.Length; left++)
+            // {
+            //     right = left;
+            //     while (looking.Length < 10 && right < s.Length && s.Length - left >= 10)
+            //     {
+            //         looking += s[right];
+
+            //         right++;
+            //     }
+
+            //     if (looking.Length == 10)
+            //     {
+            //         if (seen.Contains(looking))
+            //         {
+            //             result.Add(looking);
+            //             seen.Add(looking);
+            //         }
+            //         else
+            //         {
+            //             seen.Add(looking);
+            //         }
+            //         looking = "";
+            //     }
+            // }
+
+            // return result.ToArray();
 
             Console.WriteLine($"Result: ");
             foreach (var item in result)

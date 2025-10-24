@@ -29,3 +29,7 @@ Output: ["AAAAAAAAAA"]
 
 1 <= s.length <= 105
 s[i] is either 'A', 'C', 'G', or 'T'.
+
+```bash
+  dotnet run 
+```
